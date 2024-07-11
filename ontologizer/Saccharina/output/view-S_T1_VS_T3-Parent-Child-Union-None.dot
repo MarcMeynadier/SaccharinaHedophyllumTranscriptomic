@@ -1,0 +1,66 @@
+/* Generated with Ontologizer 2.1 build 20160628-1269 */
+digraph G {nodesep=0.4;
+GO_0000000[shape="box",label="GO:0000000\nGene Ontology\n6502/122988, 11/59"];
+GO_0043232[shape="box",label="GO:0043232\nintracellular\nnon-membrane-bounded organelle\n932/122988, 1/59"];
+GO_0032993[shape="box",label="GO:0032993\nprotein-DNA complex\n15/122988, 1/59",gradientangle=270,style="filled,setlinewidth(3)",fillcolor="white:0.833333,0.200000,1.000000"];
+GO_0019842[shape="box",label="GO:0019842\nvitamin binding\n65/122988, 1/59"];
+GO_0097159[shape="box",label="GO:0097159\norganic cyclic compound\nbinding\n1997/122988, 6/59"];
+GO_0005575[shape="box",label="GO:0005575\ncellular_component\n1950/122988, 2/59"];
+GO_1901363[shape="box",label="GO:1901363\nheterocyclic compound binding\n1997/122988, 6/59"];
+GO_0005488[shape="box",label="GO:0005488\nbinding\n3192/122988, 8/59"];
+GO_0110165[shape="box",label="GO:0110165\ncellular anatomical entity\n1864/122988, 2/59"];
+GO_0005622[shape="box",label="GO:0005622\nintracellular anatomical\nstructure\n1327/122988, 1/59"];
+GO_0046906[shape="box",label="GO:0046906\ntetrapyrrole binding\n69/122988, 1/59"];
+GO_0003674[shape="box",label="GO:0003674\nmolecular_function\n5709/122988, 10/59"];
+GO_0043226[shape="box",label="GO:0043226\norganelle\n1163/122988, 1/59"];
+GO_0031419[shape="box",label="GO:0031419\ncobalamin binding\n3/122988, 1/59",gradientangle=270,style="filled,setlinewidth(3)",fillcolor="white:0.166667,0.733333,1.000000"];
+GO_0043228[shape="box",label="GO:0043228\nnon-membrane-bounded organelle\n932/122988, 1/59"];
+GO_0043229[shape="box",label="GO:0043229\nintracellular organelle\n1161/122988, 1/59"];
+GO_0036094[shape="box",label="GO:0036094\nsmall molecule binding\n1344/122988, 3/59"];
+GO_0005694[shape="box",label="GO:0005694\nchromosome\n30/122988, 1/59",gradientangle=270,style="filled,setlinewidth(3)",fillcolor="white:0.833333,0.466667,1.000000"];
+GO_0032991[shape="box",label="GO:0032991\nprotein-containing complex\n432/122988, 1/59"];
+GO_0000000 -> GO_0003674[color=black,dir="back",tooltip="molecular_function  Gene Ontology"];
+
+GO_0000000 -> GO_0005575[color=black,dir="back",tooltip="cellular_component  Gene Ontology"];
+
+GO_0043232 -> GO_0005694[color=black,dir="back",tooltip="chromosome is a intracellular non-membrane-bounded organelle"];
+
+GO_0019842 -> GO_0031419[color=black,dir="back",tooltip="cobalamin binding is a vitamin binding"];
+
+GO_0097159 -> GO_0046906[color=black,dir="back",tooltip="tetrapyrrole binding is a organic cyclic compound binding"];
+
+GO_0005575 -> GO_0032991[color=black,dir="back",tooltip="protein-containing complex is a cellular_component"];
+
+GO_0005575 -> GO_0110165[color=black,dir="back",tooltip="cellular anatomical entity is a cellular_component"];
+
+GO_1901363 -> GO_0046906[color=black,dir="back",tooltip="tetrapyrrole binding is a heterocyclic compound binding"];
+
+GO_0005488 -> GO_1901363[color=black,dir="back",tooltip="heterocyclic compound binding is a binding"];
+
+GO_0005488 -> GO_0097159[color=black,dir="back",tooltip="organic cyclic compound binding is a binding"];
+
+GO_0005488 -> GO_0036094[color=black,dir="back",tooltip="small molecule binding is a binding"];
+
+GO_0110165 -> GO_0005622[color=black,dir="back",tooltip="intracellular anatomical structure is a cellular anatomical entity"];
+
+GO_0110165 -> GO_0043226[color=black,dir="back",tooltip="organelle is a cellular anatomical entity"];
+
+GO_0005622 -> GO_0043229[color=blue,dir="back",tooltip="intracellular organelle is part of intracellular anatomical structure"];
+
+GO_0046906 -> GO_0031419[color=black,dir="back",tooltip="cobalamin binding is a tetrapyrrole binding"];
+
+GO_0003674 -> GO_0005488[color=black,dir="back",tooltip="binding is a molecular_function"];
+
+GO_0043226 -> GO_0043228[color=black,dir="back",tooltip="non-membrane-bounded organelle is a organelle"];
+
+GO_0043226 -> GO_0043229[color=black,dir="back",tooltip="intracellular organelle is a organelle"];
+
+GO_0043228 -> GO_0043232[color=black,dir="back",tooltip="intracellular non-membrane-bounded organelle is a non-membrane-bounded organelle"];
+
+GO_0043229 -> GO_0043232[color=black,dir="back",tooltip="intracellular non-membrane-bounded organelle is a intracellular organelle"];
+
+GO_0036094 -> GO_0019842[color=black,dir="back",tooltip="vitamin binding is a small molecule binding"];
+
+GO_0032991 -> GO_0032993[color=black,dir="back",tooltip="protein-DNA complex is a protein-containing complex"];
+
+}

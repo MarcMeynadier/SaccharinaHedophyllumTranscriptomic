@@ -1,0 +1,103 @@
+/* Generated with Ontologizer 2.1 build 20160628-1269 */
+digraph G {nodesep=0.4;
+GO_0000000[shape="box",label="GO:0000000\nGene Ontology\n6502/122988, 8/74"];
+GO_1990748[shape="box",label="GO:1990748\ncellular detoxification\n45/122988, 1/74",gradientangle=270,style="filled,setlinewidth(3)",fillcolor="white:0.333333,0.300000,1.000000"];
+GO_0019842[shape="box",label="GO:0019842\nvitamin binding\n65/122988, 1/74",gradientangle=270,style="filled",fillcolor="white:0.166667,0.200000,1.000000"];
+GO_0009987[shape="box",label="GO:0009987\ncellular process\n2908/122988, 3/74"];
+GO_0098754[shape="box",label="GO:0098754\ndetoxification\n45/122988, 1/74",gradientangle=270,style="filled",fillcolor="white:0.333333,0.700000,1.000000"];
+GO_0051716[shape="box",label="GO:0051716\ncellular response to stimulus\n161/122988, 1/74"];
+GO_0097159[shape="box",label="GO:0097159\norganic cyclic compound\nbinding\n1997/122988, 2/74"];
+GO_0005515[shape="box",label="GO:0005515\nprotein binding\n1033/122988, 2/74"];
+GO_0050896[shape="box",label="GO:0050896\nresponse to stimulus\n164/122988, 1/74"];
+GO_0097237[shape="box",label="GO:0097237\ncellular response to toxic\nsubstance\n45/122988, 1/74"];
+GO_0008150[shape="box",label="GO:0008150\nbiological_process\n3686/122988, 3/74"];
+GO_0003674[shape="box",label="GO:0003674\nmolecular_function\n5709/122988, 8/74"];
+GO_0006810[shape="box",label="GO:0006810\ntransport\n538/122988, 2/74"];
+GO_0051234[shape="box",label="GO:0051234\nestablishment of localization\n541/122988, 2/74"];
+GO_0009636[shape="box",label="GO:0009636\nresponse to toxic substance\n45/122988, 1/74"];
+GO_0070887[shape="box",label="GO:0070887\ncellular response to chemical\nstimulus\n45/122988, 1/74"];
+GO_0016491[shape="box",label="GO:0016491\noxidoreductase activity\n483/122988, 1/74"];
+GO_0051179[shape="box",label="GO:0051179\nlocalization\n544/122988, 2/74"];
+GO_0016684[shape="box",label="GO:0016684\noxidoreductase activity,\nacting on peroxide as acceptor\n20/122988, 1/74",gradientangle=270,style="filled,setlinewidth(3)",fillcolor="white:0.166667,0.600000,1.000000"];
+GO_0042221[shape="box",label="GO:0042221\nresponse to chemical\n47/122988, 1/74"];
+GO_0055085[shape="box",label="GO:0055085\ntransmembrane transport\n380/122988, 2/74",gradientangle=270,style="filled,setlinewidth(3)",fillcolor="white:0.333333,0.400000,1.000000"];
+GO_1901363[shape="box",label="GO:1901363\nheterocyclic compound binding\n1997/122988, 2/74"];
+GO_0005488[shape="box",label="GO:0005488\nbinding\n3192/122988, 4/74"];
+GO_0003824[shape="box",label="GO:0003824\ncatalytic activity\n2787/122988, 4/74"];
+GO_0042802[shape="box",label="GO:0042802\nidentical protein binding\n10/122988, 1/74",gradientangle=270,style="filled,setlinewidth(3)",fillcolor="white:0.166667,0.800000,1.000000"];
+GO_0046906[shape="box",label="GO:0046906\ntetrapyrrole binding\n69/122988, 2/74",gradientangle=270,style="filled",fillcolor="white:0.166667,0.900000,1.000000"];
+GO_0031419[shape="box",label="GO:0031419\ncobalamin binding\n3/122988, 1/74",gradientangle=270,style="filled,setlinewidth(3)",fillcolor="white:0.166667,0.500000,1.000000"];
+GO_0036094[shape="box",label="GO:0036094\nsmall molecule binding\n1344/122988, 1/74"];
+GO_0000000 -> GO_0003674[color=black,dir="back",tooltip="molecular_function  Gene Ontology"];
+
+GO_0000000 -> GO_0008150[color=black,dir="back",tooltip="biological_process  Gene Ontology"];
+
+GO_0019842 -> GO_0031419[color=black,dir="back",tooltip="cobalamin binding is a vitamin binding"];
+
+GO_0009987 -> GO_1990748[color=black,dir="back",tooltip="cellular detoxification is a cellular process"];
+
+GO_0009987 -> GO_0051716[color=black,dir="back",tooltip="cellular response to stimulus is a cellular process"];
+
+GO_0009987 -> GO_0055085[color=black,dir="back",tooltip="transmembrane transport is a cellular process"];
+
+GO_0098754 -> GO_1990748[color=black,dir="back",tooltip="cellular detoxification is a detoxification"];
+
+GO_0051716 -> GO_0070887[color=black,dir="back",tooltip="cellular response to chemical stimulus is a cellular response to stimulus"];
+
+GO_0097159 -> GO_0046906[color=black,dir="back",tooltip="tetrapyrrole binding is a organic cyclic compound binding"];
+
+GO_0005515 -> GO_0042802[color=black,dir="back",tooltip="identical protein binding is a protein binding"];
+
+GO_0050896 -> GO_0042221[color=black,dir="back",tooltip="response to chemical is a response to stimulus"];
+
+GO_0050896 -> GO_0051716[color=black,dir="back",tooltip="cellular response to stimulus is a response to stimulus"];
+
+GO_0097237 -> GO_1990748[color=blue,dir="back",tooltip="cellular detoxification is part of cellular response to toxic substance"];
+
+GO_0008150 -> GO_0009987[color=black,dir="back",tooltip="cellular process is a biological_process"];
+
+GO_0008150 -> GO_0098754[color=black,dir="back",tooltip="detoxification is a biological_process"];
+
+GO_0008150 -> GO_0050896[color=black,dir="back",tooltip="response to stimulus is a biological_process"];
+
+GO_0008150 -> GO_0051179[color=black,dir="back",tooltip="localization is a biological_process"];
+
+GO_0003674 -> GO_0003824[color=black,dir="back",tooltip="catalytic activity is a molecular_function"];
+
+GO_0003674 -> GO_0005488[color=black,dir="back",tooltip="binding is a molecular_function"];
+
+GO_0006810 -> GO_0055085[color=black,dir="back",tooltip="transmembrane transport is a transport"];
+
+GO_0051234 -> GO_0006810[color=black,dir="back",tooltip="transport is a establishment of localization"];
+
+GO_0009636 -> GO_0097237[color=black,dir="back",tooltip="cellular response to toxic substance is a response to toxic substance"];
+
+GO_0009636 -> GO_0098754[color=blue,dir="back",tooltip="detoxification is part of response to toxic substance"];
+
+GO_0070887 -> GO_0097237[color=black,dir="back",tooltip="cellular response to toxic substance is a cellular response to chemical stimulus"];
+
+GO_0016491 -> GO_0016684[color=black,dir="back",tooltip="oxidoreductase activity, acting on peroxide as acceptor is a oxidoreductase activity"];
+
+GO_0051179 -> GO_0051234[color=black,dir="back",tooltip="establishment of localization is a localization"];
+
+GO_0042221 -> GO_0070887[color=black,dir="back",tooltip="cellular response to chemical stimulus is a response to chemical"];
+
+GO_0042221 -> GO_0009636[color=black,dir="back",tooltip="response to toxic substance is a response to chemical"];
+
+GO_1901363 -> GO_0046906[color=black,dir="back",tooltip="tetrapyrrole binding is a heterocyclic compound binding"];
+
+GO_0005488 -> GO_1901363[color=black,dir="back",tooltip="heterocyclic compound binding is a binding"];
+
+GO_0005488 -> GO_0005515[color=black,dir="back",tooltip="protein binding is a binding"];
+
+GO_0005488 -> GO_0097159[color=black,dir="back",tooltip="organic cyclic compound binding is a binding"];
+
+GO_0005488 -> GO_0036094[color=black,dir="back",tooltip="small molecule binding is a binding"];
+
+GO_0003824 -> GO_0016491[color=black,dir="back",tooltip="oxidoreductase activity is a catalytic activity"];
+
+GO_0046906 -> GO_0031419[color=black,dir="back",tooltip="cobalamin binding is a tetrapyrrole binding"];
+
+GO_0036094 -> GO_0019842[color=black,dir="back",tooltip="vitamin binding is a small molecule binding"];
+
+}

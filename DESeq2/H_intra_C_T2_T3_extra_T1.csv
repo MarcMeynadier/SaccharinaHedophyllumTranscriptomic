@@ -1,0 +1,2 @@
+genes,baseMean,log2FoldChange,lfcSE,stat,pvalue,padj,pfam_annotation,pfam_code,function,protein,pfam_domains
+TRINITY_DN64827_c0_g1,530.516579323878,-2.56254259832517,0.592630081512994,-4.32401708631285,1.53213422127833e-05,0.0045767642583467,572 WSC,PF01822,protein xylosyltransferase activity,-,"CAP,Chitin_bind_1,DUF1929,GLEYA,GSDH,Glyco_hydro_71,Glyoxal_oxid_N,Pectate_lyase_3,SRCR,WSC"

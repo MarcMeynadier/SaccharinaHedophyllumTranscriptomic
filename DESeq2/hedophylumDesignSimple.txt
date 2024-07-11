@@ -1,0 +1,10 @@
+sample treatment
+abundance_Hedophylum_138_T3_M2.tsv T3
+abundance_Hedophylum_139_C_M2.tsv C
+abundance_Hedophylum_141_T3_M0.tsv T3
+abundance_Hedophylum_142_T1_M1.tsv T1
+abundance_Hedophylum_73_T1_M2.tsv T1
+abundance_Hedophylum_74_T3_M2.tsv T3
+abundance_Hedophylum_76_T2_M2.tsv T2
+abundance_Hedophylum_78_T2_M1.tsv T2
+abundance_Hedophylum_86_C_M0.tsv C

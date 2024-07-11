@@ -1,0 +1,30 @@
+/* Generated with Ontologizer 2.1 build 20160628-1269 */
+digraph G {nodesep=0.4;
+GO_0003824[shape="box",label="GO:0003824\ncatalytic activity\n2536/116407, 8/119"];
+GO_0000000[shape="box",label="GO:0000000\nGene Ontology\n5700/116407, 24/119"];
+GO_0005488[shape="box",label="GO:0005488\nbinding\n2972/116407, 16/119"];
+GO_0016661[shape="box",label="GO:0016661\noxidoreductase activity,\nacting on other nitrogenous\ncompounds as donors\n3/116407, 1/119",gradientangle=270,style="filled,setlinewidth(3)",fillcolor="white:0.166667,0.600000,1.000000"];
+GO_0097159[shape="box",label="GO:0097159\norganic cyclic compound\nbinding\n1778/116407, 10/119"];
+GO_0003674[shape="box",label="GO:0003674\nmolecular_function\n5004/116407, 23/119"];
+GO_0046906[shape="box",label="GO:0046906\ntetrapyrrole binding\n54/116407, 2/119",gradientangle=270,style="filled,setlinewidth(3)",fillcolor="white:0.166667,0.200000,1.000000"];
+GO_0016491[shape="box",label="GO:0016491\noxidoreductase activity\n461/116407, 2/119"];
+GO_1901363[shape="box",label="GO:1901363\nheterocyclic compound binding\n1778/116407, 10/119"];
+GO_0003824 -> GO_0016491[color=black,dir="back",tooltip="oxidoreductase activity is a catalytic activity"];
+
+GO_0000000 -> GO_0003674[color=black,dir="back",tooltip="molecular_function  Gene Ontology"];
+
+GO_0005488 -> GO_1901363[color=black,dir="back",tooltip="heterocyclic compound binding is a binding"];
+
+GO_0005488 -> GO_0097159[color=black,dir="back",tooltip="organic cyclic compound binding is a binding"];
+
+GO_0097159 -> GO_0046906[color=black,dir="back",tooltip="tetrapyrrole binding is a organic cyclic compound binding"];
+
+GO_0003674 -> GO_0003824[color=black,dir="back",tooltip="catalytic activity is a molecular_function"];
+
+GO_0003674 -> GO_0005488[color=black,dir="back",tooltip="binding is a molecular_function"];
+
+GO_0016491 -> GO_0016661[color=black,dir="back",tooltip="oxidoreductase activity, acting on other nitrogenous compounds as donors is a oxidoreductase activity"];
+
+GO_1901363 -> GO_0046906[color=black,dir="back",tooltip="tetrapyrrole binding is a heterocyclic compound binding"];
+
+}

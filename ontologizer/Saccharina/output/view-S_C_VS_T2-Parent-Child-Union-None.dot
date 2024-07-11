@@ -1,0 +1,143 @@
+/* Generated with Ontologizer 2.1 build 20160628-1269 */
+digraph G {nodesep=0.4;
+GO_0000000[shape="box",label="GO:0000000\nGene Ontology\n6502/122988, 34/152"];
+GO_0009987[shape="box",label="GO:0009987\ncellular process\n2908/122988, 13/152"];
+GO_0097159[shape="box",label="GO:0097159\norganic cyclic compound\nbinding\n1997/122988, 8/152"];
+GO_0022857[shape="box",label="GO:0022857\ntransmembrane transporter\nactivity\n334/122988, 4/152"];
+GO_0006091[shape="box",label="GO:0006091\ngeneration of precursor\nmetabolites and energy\n110/122988, 4/152",gradientangle=270,style="filled",fillcolor="white:0.333333,0.800000,1.000000"];
+GO_1901265[shape="box",label="GO:1901265\nnucleoside phosphate binding\n1274/122988, 6/152"];
+GO_0044237[shape="box",label="GO:0044237\ncellular metabolic process\n2059/122988, 9/152"];
+GO_0022804[shape="box",label="GO:0022804\nactive transmembrane\ntransporter activity\n131/122988, 2/152"];
+GO_0005525[shape="box",label="GO:0005525\nGTP binding\n262/122988, 4/152",gradientangle=270,style="filled,setlinewidth(3)",fillcolor="white:0.166667,0.400000,1.000000"];
+GO_0097367[shape="box",label="GO:0097367\ncarbohydrate derivative\nbinding\n1177/122988, 6/152"];
+GO_0008150[shape="box",label="GO:0008150\nbiological_process\n3686/122988, 17/152"];
+GO_0008152[shape="box",label="GO:0008152\nmetabolic process\n2798/122988, 13/152"];
+GO_0003674[shape="box",label="GO:0003674\nmolecular_function\n5709/122988, 33/152"];
+GO_0006810[shape="box",label="GO:0006810\ntransport\n538/122988, 4/152"];
+GO_0015453[shape="box",label="GO:0015453\noxidoreduction-driven active\ntransmembrane transporter\nactivity\n35/122988, 2/152",gradientangle=270,style="filled,setlinewidth(3)",fillcolor="white:0.166667,0.600000,1.000000"];
+GO_0043167[shape="box",label="GO:0043167\nion binding\n1625/122988, 9/152"];
+GO_0005215[shape="box",label="GO:0005215\ntransporter activity\n339/122988, 4/152"];
+GO_0009055[shape="box",label="GO:0009055\nelectron transfer activity\n59/122988, 4/152",gradientangle=270,style="filled,setlinewidth(3)",fillcolor="white:0.166667,0.900000,1.000000"];
+GO_0043168[shape="box",label="GO:0043168\nanion binding\n1280/122988, 6/152"];
+GO_0051234[shape="box",label="GO:0051234\nestablishment of localization\n541/122988, 4/152"];
+GO_0016675[shape="box",label="GO:0016675\noxidoreductase activity,\nacting on a heme group of\ndonors\n29/122988, 2/152",gradientangle=270,style="filled,setlinewidth(3)",fillcolor="white:0.166667,0.700000,1.000000"];
+GO_0000166[shape="box",label="GO:0000166\nnucleotide binding\n1274/122988, 6/152"];
+GO_0015399[shape="box",label="GO:0015399\nprimary active transmembrane\ntransporter activity\n112/122988, 2/152"];
+GO_0032553[shape="box",label="GO:0032553\nribonucleotide binding\n1170/122988, 6/152"];
+GO_0032555[shape="box",label="GO:0032555\npurine ribonucleotide binding\n1164/122988, 6/152"];
+GO_0016491[shape="box",label="GO:0016491\noxidoreductase activity\n483/122988, 4/152"];
+GO_0051179[shape="box",label="GO:0051179\nlocalization\n544/122988, 4/152"];
+GO_0055085[shape="box",label="GO:0055085\ntransmembrane transport\n380/122988, 4/152"];
+GO_1901363[shape="box",label="GO:1901363\nheterocyclic compound binding\n1997/122988, 8/152"];
+GO_0005488[shape="box",label="GO:0005488\nbinding\n3192/122988, 17/152"];
+GO_0003824[shape="box",label="GO:0003824\ncatalytic activity\n2787/122988, 16/152"];
+GO_0032561[shape="box",label="GO:0032561\nguanyl ribonucleotide binding\n271/122988, 4/152",gradientangle=270,style="filled",fillcolor="white:0.166667,0.300000,1.000000"];
+GO_0017076[shape="box",label="GO:0017076\npurine nucleotide binding\n1225/122988, 6/152"];
+GO_0022900[shape="box",label="GO:0022900\nelectron transport chain\n78/122988, 4/152"];
+GO_0035639[shape="box",label="GO:0035639\npurine ribonucleoside\ntriphosphate binding\n1149/122988, 6/152"];
+GO_0019001[shape="box",label="GO:0019001\nguanyl nucleotide binding\n275/122988, 4/152",gradientangle=270,style="filled",fillcolor="white:0.166667,0.500000,1.000000"];
+GO_0046906[shape="box",label="GO:0046906\ntetrapyrrole binding\n69/122988, 2/152",gradientangle=270,style="filled,setlinewidth(3)",fillcolor="white:0.166667,0.200000,1.000000"];
+GO_0036094[shape="box",label="GO:0036094\nsmall molecule binding\n1344/122988, 6/152"];
+GO_0000000 -> GO_0003674[color=black,dir="back",tooltip="molecular_function  Gene Ontology"];
+
+GO_0000000 -> GO_0008150[color=black,dir="back",tooltip="biological_process  Gene Ontology"];
+
+GO_0009987 -> GO_0044237[color=black,dir="back",tooltip="cellular metabolic process is a cellular process"];
+
+GO_0009987 -> GO_0055085[color=black,dir="back",tooltip="transmembrane transport is a cellular process"];
+
+GO_0097159 -> GO_1901265[color=black,dir="back",tooltip="nucleoside phosphate binding is a organic cyclic compound binding"];
+
+GO_0097159 -> GO_0046906[color=black,dir="back",tooltip="tetrapyrrole binding is a organic cyclic compound binding"];
+
+GO_0022857 -> GO_0022804[color=black,dir="back",tooltip="active transmembrane transporter activity is a transmembrane transporter activity"];
+
+GO_0006091 -> GO_0022900[color=black,dir="back",tooltip="electron transport chain is a generation of precursor metabolites and energy"];
+
+GO_1901265 -> GO_0000166[color=black,dir="back",tooltip="nucleotide binding is a nucleoside phosphate binding"];
+
+GO_1901265 -> GO_0035639[color=black,dir="back",tooltip="purine ribonucleoside triphosphate binding is a nucleoside phosphate binding"];
+
+GO_0044237 -> GO_0006091[color=black,dir="back",tooltip="generation of precursor metabolites and energy is a cellular metabolic process"];
+
+GO_0022804 -> GO_0015399[color=black,dir="back",tooltip="primary active transmembrane transporter activity is a active transmembrane transporter activity"];
+
+GO_0097367 -> GO_0032553[color=black,dir="back",tooltip="ribonucleotide binding is a carbohydrate derivative binding"];
+
+GO_0008150 -> GO_0008152[color=black,dir="back",tooltip="metabolic process is a biological_process"];
+
+GO_0008150 -> GO_0009987[color=black,dir="back",tooltip="cellular process is a biological_process"];
+
+GO_0008150 -> GO_0051179[color=black,dir="back",tooltip="localization is a biological_process"];
+
+GO_0008152 -> GO_0044237[color=black,dir="back",tooltip="cellular metabolic process is a metabolic process"];
+
+GO_0003674 -> GO_0003824[color=black,dir="back",tooltip="catalytic activity is a molecular_function"];
+
+GO_0003674 -> GO_0005215[color=black,dir="back",tooltip="transporter activity is a molecular_function"];
+
+GO_0003674 -> GO_0005488[color=black,dir="back",tooltip="binding is a molecular_function"];
+
+GO_0006810 -> GO_0055085[color=black,dir="back",tooltip="transmembrane transport is a transport"];
+
+GO_0043167 -> GO_0043168[color=black,dir="back",tooltip="anion binding is a ion binding"];
+
+GO_0005215 -> GO_0022857[color=black,dir="back",tooltip="transmembrane transporter activity is a transporter activity"];
+
+GO_0043168 -> GO_0035639[color=black,dir="back",tooltip="purine ribonucleoside triphosphate binding is a anion binding"];
+
+GO_0051234 -> GO_0006810[color=black,dir="back",tooltip="transport is a establishment of localization"];
+
+GO_0000166 -> GO_0017076[color=black,dir="back",tooltip="purine nucleotide binding is a nucleotide binding"];
+
+GO_0000166 -> GO_0032553[color=black,dir="back",tooltip="ribonucleotide binding is a nucleotide binding"];
+
+GO_0015399 -> GO_0015453[color=black,dir="back",tooltip="oxidoreduction-driven active transmembrane transporter activity is a primary active transmembrane transporter activity"];
+
+GO_0032553 -> GO_0032555[color=black,dir="back",tooltip="purine ribonucleotide binding is a ribonucleotide binding"];
+
+GO_0032555 -> GO_0032561[color=black,dir="back",tooltip="guanyl ribonucleotide binding is a purine ribonucleotide binding"];
+
+GO_0016491 -> GO_0009055[color=black,dir="back",tooltip="electron transfer activity is a oxidoreductase activity"];
+
+GO_0016491 -> GO_0015453[color=black,dir="back",tooltip="oxidoreduction-driven active transmembrane transporter activity  oxidoreductase activity"];
+
+GO_0016491 -> GO_0016675[color=black,dir="back",tooltip="oxidoreductase activity, acting on a heme group of donors is a oxidoreductase activity"];
+
+GO_0051179 -> GO_0051234[color=black,dir="back",tooltip="establishment of localization is a localization"];
+
+GO_0055085 -> GO_0022857[color=blue,dir="back",tooltip="transmembrane transporter activity is part of transmembrane transport"];
+
+GO_1901363 -> GO_1901265[color=black,dir="back",tooltip="nucleoside phosphate binding is a heterocyclic compound binding"];
+
+GO_1901363 -> GO_0046906[color=black,dir="back",tooltip="tetrapyrrole binding is a heterocyclic compound binding"];
+
+GO_0005488 -> GO_1901363[color=black,dir="back",tooltip="heterocyclic compound binding is a binding"];
+
+GO_0005488 -> GO_0097159[color=black,dir="back",tooltip="organic cyclic compound binding is a binding"];
+
+GO_0005488 -> GO_0097367[color=black,dir="back",tooltip="carbohydrate derivative binding is a binding"];
+
+GO_0005488 -> GO_0036094[color=black,dir="back",tooltip="small molecule binding is a binding"];
+
+GO_0005488 -> GO_0043167[color=black,dir="back",tooltip="ion binding is a binding"];
+
+GO_0003824 -> GO_0015399[color=black,dir="back",tooltip="primary active transmembrane transporter activity  catalytic activity"];
+
+GO_0003824 -> GO_0016491[color=black,dir="back",tooltip="oxidoreductase activity is a catalytic activity"];
+
+GO_0032561 -> GO_0005525[color=black,dir="back",tooltip="GTP binding is a guanyl ribonucleotide binding"];
+
+GO_0017076 -> GO_0019001[color=black,dir="back",tooltip="guanyl nucleotide binding is a purine nucleotide binding"];
+
+GO_0017076 -> GO_0032555[color=black,dir="back",tooltip="purine ribonucleotide binding is a purine nucleotide binding"];
+
+GO_0022900 -> GO_0009055[color=blue,dir="back",tooltip="electron transfer activity is part of electron transport chain"];
+
+GO_0035639 -> GO_0005525[color=black,dir="back",tooltip="GTP binding is a purine ribonucleoside triphosphate binding"];
+
+GO_0019001 -> GO_0032561[color=black,dir="back",tooltip="guanyl ribonucleotide binding is a guanyl nucleotide binding"];
+
+GO_0036094 -> GO_0000166[color=black,dir="back",tooltip="nucleotide binding is a small molecule binding"];
+
+}

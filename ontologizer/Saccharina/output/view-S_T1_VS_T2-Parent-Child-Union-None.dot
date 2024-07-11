@@ -1,0 +1,72 @@
+/* Generated with Ontologizer 2.1 build 20160628-1269 */
+digraph G {nodesep=0.4;
+GO_0000000[shape="box",label="GO:0000000\nGene Ontology\n6502/122988, 9/60"];
+GO_1901564[shape="box",label="GO:1901564\norganonitrogen compound\nmetabolic process\n1926/122988, 1/60"];
+GO_0009987[shape="box",label="GO:0009987\ncellular process\n2908/122988, 1/60"];
+GO_0016740[shape="box",label="GO:0016740\ntransferase activity\n794/122988, 3/60",gradientangle=270,style="filled,setlinewidth(3)",fillcolor="white:0.166667,0.600000,1.000000"];
+GO_0006725[shape="box",label="GO:0006725\ncellular aromatic compound\nmetabolic process\n614/122988, 1/60"];
+GO_0072521[shape="box",label="GO:0072521\npurine-containing compound\nmetabolic process\n106/122988, 1/60",gradientangle=270,style="filled,setlinewidth(3)",fillcolor="white:0.333333,0.200000,1.000000"];
+GO_0005515[shape="box",label="GO:0005515\nprotein binding\n1033/122988, 4/60",gradientangle=270,style="filled",fillcolor="white:0.166667,0.800000,1.000000"];
+GO_1901360[shape="box",label="GO:1901360\norganic cyclic compound\nmetabolic process\n635/122988, 1/60"];
+GO_0044237[shape="box",label="GO:0044237\ncellular metabolic process\n2059/122988, 1/60"];
+GO_0005488[shape="box",label="GO:0005488\nbinding\n3192/122988, 4/60"];
+GO_0003824[shape="box",label="GO:0003824\ncatalytic activity\n2787/122988, 3/60"];
+GO_0034641[shape="box",label="GO:0034641\ncellular nitrogen compound\nmetabolic process\n1480/122988, 1/60"];
+GO_0042802[shape="box",label="GO:0042802\nidentical protein binding\n10/122988, 1/60",gradientangle=270,style="filled,setlinewidth(3)",fillcolor="white:0.166667,0.400000,1.000000"];
+GO_0046483[shape="box",label="GO:0046483\nheterocycle metabolic process\n619/122988, 1/60"];
+GO_0008150[shape="box",label="GO:0008150\nbiological_process\n3686/122988, 1/60"];
+GO_0006807[shape="box",label="GO:0006807\nnitrogen compound metabolic\nprocess\n2338/122988, 1/60"];
+GO_0008152[shape="box",label="GO:0008152\nmetabolic process\n2798/122988, 1/60"];
+GO_0071704[shape="box",label="GO:0071704\norganic substance metabolic\nprocess\n2604/122988, 1/60"];
+GO_0003674[shape="box",label="GO:0003674\nmolecular_function\n5709/122988, 7/60"];
+GO_0000000 -> GO_0003674[color=black,dir="back",tooltip="molecular_function  Gene Ontology"];
+
+GO_0000000 -> GO_0008150[color=black,dir="back",tooltip="biological_process  Gene Ontology"];
+
+GO_1901564 -> GO_0072521[color=black,dir="back",tooltip="purine-containing compound metabolic process is a organonitrogen compound metabolic process"];
+
+GO_0009987 -> GO_0044237[color=black,dir="back",tooltip="cellular metabolic process is a cellular process"];
+
+GO_0006725 -> GO_0072521[color=black,dir="back",tooltip="purine-containing compound metabolic process is a cellular aromatic compound metabolic process"];
+
+GO_0005515 -> GO_0042802[color=black,dir="back",tooltip="identical protein binding is a protein binding"];
+
+GO_1901360 -> GO_0072521[color=black,dir="back",tooltip="purine-containing compound metabolic process is a organic cyclic compound metabolic process"];
+
+GO_0044237 -> GO_0006725[color=black,dir="back",tooltip="cellular aromatic compound metabolic process is a cellular metabolic process"];
+
+GO_0044237 -> GO_0034641[color=black,dir="back",tooltip="cellular nitrogen compound metabolic process is a cellular metabolic process"];
+
+GO_0044237 -> GO_0046483[color=black,dir="back",tooltip="heterocycle metabolic process is a cellular metabolic process"];
+
+GO_0005488 -> GO_0005515[color=black,dir="back",tooltip="protein binding is a binding"];
+
+GO_0003824 -> GO_0016740[color=black,dir="back",tooltip="transferase activity is a catalytic activity"];
+
+GO_0034641 -> GO_0072521[color=black,dir="back",tooltip="purine-containing compound metabolic process is a cellular nitrogen compound metabolic process"];
+
+GO_0046483 -> GO_0072521[color=black,dir="back",tooltip="purine-containing compound metabolic process is a heterocycle metabolic process"];
+
+GO_0008150 -> GO_0008152[color=black,dir="back",tooltip="metabolic process is a biological_process"];
+
+GO_0008150 -> GO_0009987[color=black,dir="back",tooltip="cellular process is a biological_process"];
+
+GO_0006807 -> GO_1901564[color=black,dir="back",tooltip="organonitrogen compound metabolic process is a nitrogen compound metabolic process"];
+
+GO_0006807 -> GO_0034641[color=black,dir="back",tooltip="cellular nitrogen compound metabolic process is a nitrogen compound metabolic process"];
+
+GO_0008152 -> GO_0071704[color=black,dir="back",tooltip="organic substance metabolic process is a metabolic process"];
+
+GO_0008152 -> GO_0006807[color=black,dir="back",tooltip="nitrogen compound metabolic process is a metabolic process"];
+
+GO_0008152 -> GO_0044237[color=black,dir="back",tooltip="cellular metabolic process is a metabolic process"];
+
+GO_0071704 -> GO_1901360[color=black,dir="back",tooltip="organic cyclic compound metabolic process is a organic substance metabolic process"];
+
+GO_0071704 -> GO_1901564[color=black,dir="back",tooltip="organonitrogen compound metabolic process is a organic substance metabolic process"];
+
+GO_0003674 -> GO_0003824[color=black,dir="back",tooltip="catalytic activity is a molecular_function"];
+
+GO_0003674 -> GO_0005488[color=black,dir="back",tooltip="binding is a molecular_function"];
+
+}

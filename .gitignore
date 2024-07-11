@@ -1,0 +1,6 @@
+# Ignore files
+.ipynb_checkpoints
+.DS_Store
+pycache
+__pycache__
+kallistoOutput

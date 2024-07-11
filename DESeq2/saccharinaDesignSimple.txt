@@ -1,0 +1,9 @@
+sample treatment
+abundance_Saccharina_112_C_M2.tsv C
+abundance_Saccharina_11_C_M1.tsv C
+abundance_Saccharina_14_T3_M2.tsv T3
+abundance_Saccharina_19_C_M0.tsv C
+abundance_Saccharina_1_T1_M2.tsv T1
+abundance_Saccharina_29_T1_M1.tsv T1
+abundance_Saccharina_36_T3_M1.tsv T3
+abundance_Saccharina_6_T2_M1.tsv T2

@@ -1,0 +1,223 @@
+/* Generated with Ontologizer 2.1 build 20160628-1269 */
+digraph G {nodesep=0.4;
+GO_0000000[shape="box",label="GO:0000000\nGene Ontology\n5700/116407, 26/106"];
+GO_0016769[shape="box",label="GO:0016769\ntransferase activity,\ntransferring nitrogenous\ngroups\n6/116407, 1/106",gradientangle=270,style="filled,setlinewidth(3)",fillcolor="white:0.166667,0.563636,1.000000"];
+GO_0019842[shape="box",label="GO:0019842\nvitamin binding\n47/116407, 2/106"];
+GO_0009987[shape="box",label="GO:0009987\ncellular process\n2408/116407, 9/106"];
+GO_0006790[shape="box",label="GO:0006790\nsulfur compound metabolic\nprocess\n37/116407, 1/106"];
+GO_0070279[shape="box",label="GO:0070279\nvitamin B6 binding\n38/116407, 2/106",gradientangle=270,style="filled",fillcolor="white:0.166667,0.636364,1.000000"];
+GO_0097159[shape="box",label="GO:0097159\norganic cyclic compound\nbinding\n1778/116407, 13/106"];
+GO_0022804[shape="box",label="GO:0022804\nactive transmembrane\ntransporter activity\n111/116407, 2/106"];
+GO_1901576[shape="box",label="GO:1901576\norganic substance biosynthetic\nprocess\n956/116407, 2/106"];
+GO_0006807[shape="box",label="GO:0006807\nnitrogen compound metabolic\nprocess\n1818/116407, 5/106"];
+GO_0071704[shape="box",label="GO:0071704\norganic substance metabolic\nprocess\n2081/116407, 6/106"];
+GO_0006810[shape="box",label="GO:0006810\ntransport\n515/116407, 2/106"];
+GO_0006811[shape="box",label="GO:0006811\nmonoatomic ion transport\n157/116407, 2/106"];
+GO_0043167[shape="box",label="GO:0043167\nion binding\n1477/116407, 12/106"];
+GO_0043168[shape="box",label="GO:0043168\nanion binding\n1172/116407, 10/106"];
+GO_0051234[shape="box",label="GO:0051234\nestablishment of localization\n518/116407, 2/106"];
+GO_0016675[shape="box",label="GO:0016675\noxidoreductase activity,\nacting on a heme group of\ndonors\n14/116407, 1/106",gradientangle=270,style="filled,setlinewidth(3)",fillcolor="white:0.166667,0.490909,1.000000"];
+GO_0015399[shape="box",label="GO:0015399\nprimary active transmembrane\ntransporter activity\n90/116407, 2/106",gradientangle=270,style="filled,setlinewidth(3)",fillcolor="white:0.166667,0.200000,1.000000"];
+GO_0019752[shape="box",label="GO:0019752\ncarboxylic acid metabolic\nprocess\n175/116407, 2/106"];
+GO_0043436[shape="box",label="GO:0043436\noxoacid metabolic process\n175/116407, 2/106"];
+GO_0034220[shape="box",label="GO:0034220\nmonoatomic ion transmembrane\ntransport\n132/116407, 2/106"];
+GO_0055085[shape="box",label="GO:0055085\ntransmembrane transport\n374/116407, 2/106"];
+GO_1901363[shape="box",label="GO:1901363\nheterocyclic compound binding\n1778/116407, 13/106"];
+GO_0016053[shape="box",label="GO:0016053\norganic acid biosynthetic\nprocess\n49/116407, 1/106"];
+GO_0046394[shape="box",label="GO:0046394\ncarboxylic acid biosynthetic\nprocess\n49/116407, 1/106"];
+GO_0042302[shape="box",label="GO:0042302\nstructural constituent of\ncuticle\n8/116407, 4/106",gradientangle=270,style="filled,setlinewidth(3)",fillcolor="white:0.166667,0.927273,1.000000"];
+GO_0006082[shape="box",label="GO:0006082\norganic acid metabolic process\n176/116407, 2/106"];
+GO_0022853[shape="box",label="GO:0022853\nactive monoatomic ion\ntransmembrane transporter\nactivity\n38/116407, 2/106",gradientangle=270,style="filled,setlinewidth(3)",fillcolor="white:0.166667,0.345455,1.000000"];
+GO_0022857[shape="box",label="GO:0022857\ntransmembrane transporter\nactivity\n326/116407, 2/106"];
+GO_0044237[shape="box",label="GO:0044237\ncellular metabolic process\n1643/116407, 6/106"];
+GO_0005198[shape="box",label="GO:0005198\nstructural molecule activity\n445/116407, 5/106"];
+GO_0008150[shape="box",label="GO:0008150\nbiological_process\n3028/116407, 11/106"];
+GO_0008152[shape="box",label="GO:0008152\nmetabolic process\n2229/116407, 8/106"];
+GO_0044249[shape="box",label="GO:0044249\ncellular biosynthetic process\n888/116407, 2/106"];
+GO_0003674[shape="box",label="GO:0003674\nmolecular_function\n5004/116407, 25/106"];
+GO_0030170[shape="box",label="GO:0030170\npyridoxal phosphate binding\n38/116407, 2/106",gradientangle=270,style="filled,setlinewidth(3)",fillcolor="white:0.166667,0.272727,1.000000"];
+GO_0005215[shape="box",label="GO:0005215\ntransporter activity\n327/116407, 2/106"];
+GO_0000096[shape="box",label="GO:0000096\nsulfur amino acid metabolic\nprocess\n15/116407, 1/106"];
+GO_0000097[shape="box",label="GO:0000097\nsulfur amino acid biosynthetic\nprocess\n5/116407, 1/106",gradientangle=270,style="filled,setlinewidth(3)",fillcolor="white:0.333333,0.781818,1.000000"];
+GO_1901564[shape="box",label="GO:1901564\norganonitrogen compound\nmetabolic process\n1394/116407, 5/106"];
+GO_0009058[shape="box",label="GO:0009058\nbiosynthetic process\n994/116407, 2/106"];
+GO_1901566[shape="box",label="GO:1901566\norganonitrogen compound\nbiosynthetic process\n678/116407, 2/106"];
+GO_0015075[shape="box",label="GO:0015075\nmonoatomic ion transmembrane\ntransporter activity\n124/116407, 2/106"];
+GO_0016740[shape="box",label="GO:0016740\ntransferase activity\n793/116407, 4/106"];
+GO_0042085[shape="box",label="GO:0042085\n5-methyltetrahydropteroyltri-L-glutamate-dependent\nmethyltransferase activity\n1/116407, 1/106",gradientangle=270,style="filled,setlinewidth(3)",fillcolor="white:0.166667,0.854545,1.000000"];
+GO_0016741[shape="box",label="GO:0016741\ntransferase activity,\ntransferring one-carbon groups\n107/116407, 1/106"];
+GO_0008168[shape="box",label="GO:0008168\nmethyltransferase activity\n102/116407, 1/106"];
+GO_0016491[shape="box",label="GO:0016491\noxidoreductase activity\n461/116407, 1/106"];
+GO_0051179[shape="box",label="GO:0051179\nlocalization\n522/116407, 2/106"];
+GO_0008172[shape="box",label="GO:0008172\nS-methyltransferase activity\n2/116407, 1/106",gradientangle=270,style="filled,setlinewidth(3)",fillcolor="white:0.166667,0.709091,1.000000"];
+GO_0044272[shape="box",label="GO:0044272\nsulfur compound biosynthetic\nprocess\n16/116407, 1/106",gradientangle=270,style="filled",fillcolor="white:0.333333,0.418182,1.000000"];
+GO_0003824[shape="box",label="GO:0003824\ncatalytic activity\n2536/116407, 10/106"];
+GO_0005488[shape="box",label="GO:0005488\nbinding\n2972/116407, 18/106"];
+GO_0044281[shape="box",label="GO:0044281\nsmall molecule metabolic\nprocess\n296/116407, 2/106"];
+GO_0044283[shape="box",label="GO:0044283\nsmall molecule biosynthetic\nprocess\n79/116407, 1/106"];
+GO_0036094[shape="box",label="GO:0036094\nsmall molecule binding\n1245/116407, 11/106"];
+GO_0000000 -> GO_0003674[color=black,dir="back",tooltip="molecular_function  Gene Ontology"];
+
+GO_0000000 -> GO_0008150[color=black,dir="back",tooltip="biological_process  Gene Ontology"];
+
+GO_0019842 -> GO_0070279[color=black,dir="back",tooltip="vitamin B6 binding is a vitamin binding"];
+
+GO_0009987 -> GO_0044237[color=black,dir="back",tooltip="cellular metabolic process is a cellular process"];
+
+GO_0009987 -> GO_0055085[color=black,dir="back",tooltip="transmembrane transport is a cellular process"];
+
+GO_0006790 -> GO_0000096[color=black,dir="back",tooltip="sulfur amino acid metabolic process is a sulfur compound metabolic process"];
+
+GO_0006790 -> GO_0044272[color=black,dir="back",tooltip="sulfur compound biosynthetic process is a sulfur compound metabolic process"];
+
+GO_0070279 -> GO_0030170[color=black,dir="back",tooltip="pyridoxal phosphate binding is a vitamin B6 binding"];
+
+GO_0097159 -> GO_0070279[color=black,dir="back",tooltip="vitamin B6 binding is a organic cyclic compound binding"];
+
+GO_0022804 -> GO_0015399[color=black,dir="back",tooltip="primary active transmembrane transporter activity is a active transmembrane transporter activity"];
+
+GO_0022804 -> GO_0022853[color=black,dir="back",tooltip="active monoatomic ion transmembrane transporter activity is a active transmembrane transporter activity"];
+
+GO_1901576 -> GO_1901566[color=black,dir="back",tooltip="organonitrogen compound biosynthetic process is a organic substance biosynthetic process"];
+
+GO_1901576 -> GO_0016053[color=black,dir="back",tooltip="organic acid biosynthetic process is a organic substance biosynthetic process"];
+
+GO_0006807 -> GO_1901564[color=black,dir="back",tooltip="organonitrogen compound metabolic process is a nitrogen compound metabolic process"];
+
+GO_0071704 -> GO_1901564[color=black,dir="back",tooltip="organonitrogen compound metabolic process is a organic substance metabolic process"];
+
+GO_0071704 -> GO_1901576[color=black,dir="back",tooltip="organic substance biosynthetic process is a organic substance metabolic process"];
+
+GO_0071704 -> GO_0006082[color=black,dir="back",tooltip="organic acid metabolic process is a organic substance metabolic process"];
+
+GO_0006810 -> GO_0006811[color=black,dir="back",tooltip="monoatomic ion transport is a transport"];
+
+GO_0006810 -> GO_0055085[color=black,dir="back",tooltip="transmembrane transport is a transport"];
+
+GO_0006811 -> GO_0034220[color=black,dir="back",tooltip="monoatomic ion transmembrane transport is a monoatomic ion transport"];
+
+GO_0043167 -> GO_0043168[color=black,dir="back",tooltip="anion binding is a ion binding"];
+
+GO_0043168 -> GO_0030170[color=black,dir="back",tooltip="pyridoxal phosphate binding is a anion binding"];
+
+GO_0051234 -> GO_0006810[color=black,dir="back",tooltip="transport is a establishment of localization"];
+
+GO_0019752 -> GO_0000096[color=black,dir="back",tooltip="sulfur amino acid metabolic process is a carboxylic acid metabolic process"];
+
+GO_0019752 -> GO_0046394[color=black,dir="back",tooltip="carboxylic acid biosynthetic process is a carboxylic acid metabolic process"];
+
+GO_0043436 -> GO_0019752[color=black,dir="back",tooltip="carboxylic acid metabolic process is a oxoacid metabolic process"];
+
+GO_0034220 -> GO_0015075[color=blue,dir="back",tooltip="monoatomic ion transmembrane transporter activity is part of monoatomic ion transmembrane transport"];
+
+GO_0055085 -> GO_0022857[color=blue,dir="back",tooltip="transmembrane transporter activity is part of transmembrane transport"];
+
+GO_0055085 -> GO_0034220[color=black,dir="back",tooltip="monoatomic ion transmembrane transport is a transmembrane transport"];
+
+GO_1901363 -> GO_0070279[color=black,dir="back",tooltip="vitamin B6 binding is a heterocyclic compound binding"];
+
+GO_0016053 -> GO_0046394[color=black,dir="back",tooltip="carboxylic acid biosynthetic process is a organic acid biosynthetic process"];
+
+GO_0046394 -> GO_0000097[color=black,dir="back",tooltip="sulfur amino acid biosynthetic process is a carboxylic acid biosynthetic process"];
+
+GO_0006082 -> GO_0016053[color=black,dir="back",tooltip="organic acid biosynthetic process is a organic acid metabolic process"];
+
+GO_0006082 -> GO_0043436[color=black,dir="back",tooltip="oxoacid metabolic process is a organic acid metabolic process"];
+
+GO_0022857 -> GO_0015075[color=black,dir="back",tooltip="monoatomic ion transmembrane transporter activity is a transmembrane transporter activity"];
+
+GO_0022857 -> GO_0022804[color=black,dir="back",tooltip="active transmembrane transporter activity is a transmembrane transporter activity"];
+
+GO_0044237 -> GO_0006082[color=black,dir="back",tooltip="organic acid metabolic process is a cellular metabolic process"];
+
+GO_0044237 -> GO_0006790[color=black,dir="back",tooltip="sulfur compound metabolic process is a cellular metabolic process"];
+
+GO_0044237 -> GO_0044249[color=black,dir="back",tooltip="cellular biosynthetic process is a cellular metabolic process"];
+
+GO_0005198 -> GO_0042302[color=black,dir="back",tooltip="structural constituent of cuticle is a structural molecule activity"];
+
+GO_0008150 -> GO_0008152[color=black,dir="back",tooltip="metabolic process is a biological_process"];
+
+GO_0008150 -> GO_0009987[color=black,dir="back",tooltip="cellular process is a biological_process"];
+
+GO_0008150 -> GO_0051179[color=black,dir="back",tooltip="localization is a biological_process"];
+
+GO_0008152 -> GO_0071704[color=black,dir="back",tooltip="organic substance metabolic process is a metabolic process"];
+
+GO_0008152 -> GO_0006807[color=black,dir="back",tooltip="nitrogen compound metabolic process is a metabolic process"];
+
+GO_0008152 -> GO_0009058[color=black,dir="back",tooltip="biosynthetic process is a metabolic process"];
+
+GO_0008152 -> GO_0044237[color=black,dir="back",tooltip="cellular metabolic process is a metabolic process"];
+
+GO_0008152 -> GO_0044281[color=black,dir="back",tooltip="small molecule metabolic process is a metabolic process"];
+
+GO_0044249 -> GO_0016053[color=black,dir="back",tooltip="organic acid biosynthetic process is a cellular biosynthetic process"];
+
+GO_0044249 -> GO_0044272[color=black,dir="back",tooltip="sulfur compound biosynthetic process is a cellular biosynthetic process"];
+
+GO_0003674 -> GO_0003824[color=black,dir="back",tooltip="catalytic activity is a molecular_function"];
+
+GO_0003674 -> GO_0005198[color=black,dir="back",tooltip="structural molecule activity is a molecular_function"];
+
+GO_0003674 -> GO_0005215[color=black,dir="back",tooltip="transporter activity is a molecular_function"];
+
+GO_0003674 -> GO_0005488[color=black,dir="back",tooltip="binding is a molecular_function"];
+
+GO_0005215 -> GO_0022857[color=black,dir="back",tooltip="transmembrane transporter activity is a transporter activity"];
+
+GO_0000096 -> GO_0000097[color=black,dir="back",tooltip="sulfur amino acid biosynthetic process is a sulfur amino acid metabolic process"];
+
+GO_1901564 -> GO_0000096[color=black,dir="back",tooltip="sulfur amino acid metabolic process is a organonitrogen compound metabolic process"];
+
+GO_1901564 -> GO_1901566[color=black,dir="back",tooltip="organonitrogen compound biosynthetic process is a organonitrogen compound metabolic process"];
+
+GO_0009058 -> GO_1901576[color=black,dir="back",tooltip="organic substance biosynthetic process is a biosynthetic process"];
+
+GO_0009058 -> GO_0044249[color=black,dir="back",tooltip="cellular biosynthetic process is a biosynthetic process"];
+
+GO_0009058 -> GO_0044283[color=black,dir="back",tooltip="small molecule biosynthetic process is a biosynthetic process"];
+
+GO_1901566 -> GO_0000097[color=black,dir="back",tooltip="sulfur amino acid biosynthetic process is a organonitrogen compound biosynthetic process"];
+
+GO_0015075 -> GO_0022853[color=black,dir="back",tooltip="active monoatomic ion transmembrane transporter activity is a monoatomic ion transmembrane transporter activity"];
+
+GO_0016740 -> GO_0016741[color=black,dir="back",tooltip="transferase activity, transferring one-carbon groups is a transferase activity"];
+
+GO_0016740 -> GO_0016769[color=black,dir="back",tooltip="transferase activity, transferring nitrogenous groups is a transferase activity"];
+
+GO_0016741 -> GO_0008168[color=black,dir="back",tooltip="methyltransferase activity is a transferase activity, transferring one-carbon groups"];
+
+GO_0008168 -> GO_0008172[color=black,dir="back",tooltip="S-methyltransferase activity is a methyltransferase activity"];
+
+GO_0008168 -> GO_0042085[color=black,dir="back",tooltip="5-methyltetrahydropteroyltri-L-glutamate-dependent methyltransferase activity is a methyltransferase activity"];
+
+GO_0016491 -> GO_0016675[color=black,dir="back",tooltip="oxidoreductase activity, acting on a heme group of donors is a oxidoreductase activity"];
+
+GO_0051179 -> GO_0051234[color=black,dir="back",tooltip="establishment of localization is a localization"];
+
+GO_0044272 -> GO_0000097[color=black,dir="back",tooltip="sulfur amino acid biosynthetic process is a sulfur compound biosynthetic process"];
+
+GO_0003824 -> GO_0015399[color=black,dir="back",tooltip="primary active transmembrane transporter activity  catalytic activity"];
+
+GO_0003824 -> GO_0016491[color=black,dir="back",tooltip="oxidoreductase activity is a catalytic activity"];
+
+GO_0003824 -> GO_0016740[color=black,dir="back",tooltip="transferase activity is a catalytic activity"];
+
+GO_0005488 -> GO_1901363[color=black,dir="back",tooltip="heterocyclic compound binding is a binding"];
+
+GO_0005488 -> GO_0097159[color=black,dir="back",tooltip="organic cyclic compound binding is a binding"];
+
+GO_0005488 -> GO_0036094[color=black,dir="back",tooltip="small molecule binding is a binding"];
+
+GO_0005488 -> GO_0043167[color=black,dir="back",tooltip="ion binding is a binding"];
+
+GO_0044281 -> GO_0006082[color=black,dir="back",tooltip="organic acid metabolic process is a small molecule metabolic process"];
+
+GO_0044281 -> GO_0044283[color=black,dir="back",tooltip="small molecule biosynthetic process is a small molecule metabolic process"];
+
+GO_0044283 -> GO_0016053[color=black,dir="back",tooltip="organic acid biosynthetic process is a small molecule biosynthetic process"];
+
+GO_0036094 -> GO_0019842[color=black,dir="back",tooltip="vitamin binding is a small molecule binding"];
+
+}

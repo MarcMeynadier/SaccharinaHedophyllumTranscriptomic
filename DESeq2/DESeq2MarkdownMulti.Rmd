@@ -1,0 +1,330 @@
+---
+title: "kelpProject"
+author: "Marc Meynadier"
+date: "2023-04-07"
+output: html_document
+---
+
+```{r}
+# Differential expression on Kallisto data 
+
+# Preliminary samples - 2016 dataset
+
+# Packages and dependence
+packageCheckClassic <- function(x){
+  # 
+  for( i in x ){
+    if( ! require( i , character.only = TRUE ) ){
+      install.packages( i , dependencies = TRUE )
+      require( i , character.only = TRUE )
+    }
+  }
+}
+
+packageCheckClassic(c('goseq','DESeq2','adegenet','vsn','devtools','BiocManager','ggplot2','ggrepel','markdown','pheatmap','RColorBrewer','genefilter','gplots','vegan','dplyr','limma'))
+#BiocManager::install('tximport', force = TRUE)
+#BiocManager::install('apeglm')
+#BiocManager::install('ashr')
+#BiocManager::install("EnhancedVolcano")
+#BiocManager::install("arrayQualityMetrics")
+#BiocManager::install("goseq")
+if (!require(devtools)) install.packages("devtools")
+devtools::install_github("yanlinlin82/ggvenn")
+install_github("pmartinezarbizu/pairwiseAdonis/pairwiseAdonis") 
+library("pairwiseAdonis")
+library("adegenet")
+library('ggvenn')
+library('tximport')
+library('apeglm')
+library('ashr')
+library('EnhancedVolcano')
+library('BiocManager')
+library('goseq')
+source_url("https://raw.githubusercontent.com/obigriffith/biostar-tutorials/master/Heatmaps/heatmap.3.R")
+
+# Working environment and data loading
+scriptPath<-dirname(rstudioapi::getSourceEditorContext()$path)
+setwd(scriptPath)
+#candidateGenes<-read.csv('candidateGenes.csv',header=T,sep=',')
+samplesSaccharina<-read.table('saccharinaDesignMulti.txt',header=T)
+samplesHedophylum<-read.table('hedophylumDesignMulti.txt',header=T)
+dataPath<-'/Users/mmeynadier/Documents/kelpProject/kallistoOutput'
+outputPath<-'/Users/mmeynadier/Documents/kelpProject/DESeq2Output'
+#setwd(dataPath)
+
+# DDS object
+
+# If data from kallisto
+tx2geneSaccharina<-read.table('Saccharina_tx2gene',header=T)
+tx2geneHedophylum<-read.table('Hedophylum_tx2gene',header=T)
+
+
+# 
+# # Data importation - txImport
+setwd(dataPath)
+filesSaccharina<-paste0(samplesSaccharina$sample)
+txiSaccharina<-tximport(files = filesSaccharina,type='kallisto',tx2gene = tx2geneSaccharina)
+filesHedophylum<-paste0(samplesHedophylum$sample)
+txiHedophylum<-tximport(files = filesHedophylum,type='kallisto',tx2gene = tx2geneHedophylum)
+
+ddsSaccharina<-DESeqDataSetFromTximport(txiSaccharina,colData=samplesSaccharina,design= ~treatment + mesocosm)
+ddsHedophylum<-DESeqDataSetFromTximport(txiHedophylum,colData=samplesHedophylum,design= ~treatment + mesocosm)
+# pre-filtering
+keepSaccharina <- rowSums(counts(ddsSaccharina)) >= 10 
+ddsSaccharina <- ddsSaccharina[keepSaccharina,]
+keepHedophylum <- rowSums(counts(ddsHedophylum)) >= 10 
+ddsHedophylum <- ddsHedophylum[keepHedophylum,]
+
+# Differential expression analysis
+ddsSaccharina<-DESeq(ddsSaccharina)
+cbind(resultsNames(ddsSaccharina))
+ddsHedophylum<-DESeq(ddsHedophylum)
+cbind(resultsNames(ddsHedophylum))
+
+
+
+# Exploring the results - Saccharina
+
+S_C_vs_T1 <- results(ddsSaccharina,contrast=c("treatment", "T1", "C"))
+S_C_vs_T1_trimmed <- subset(S_C_vs_T1, padj < 0.05)
+S_C_vs_T1_trimmed <- subset(S_C_vs_T1_trimmed, log2FoldChange > 2 | log2FoldChange < -2)
+S_C_vs_T2 <- results(ddsSaccharina,contrast=c("treatment", "T2", "C"))
+S_C_vs_T2_trimmed <- subset(S_C_vs_T2, padj < 0.05)
+S_C_vs_T2_trimmed <- subset(S_C_vs_T2_trimmed, log2FoldChange > 2 | log2FoldChange < -2)
+S_C_vs_T3 <- results(ddsSaccharina,contrast=c("treatment", "T3", "C"))
+S_C_vs_T3_trimmed <- subset(S_C_vs_T3, padj < 0.05)
+S_C_vs_T3_trimmed <- subset(S_C_vs_T3_trimmed, log2FoldChange > 2 | log2FoldChange < -2)
+S_T1_vs_T2 <- results(ddsSaccharina,contrast=c("treatment", "T2", "T1"))
+S_T1_vs_T2_trimmed <- subset(S_T1_vs_T2, padj < 0.05)
+S_T1_vs_T2_trimmed <- subset(S_T1_vs_T2_trimmed, log2FoldChange > 2 | log2FoldChange < -2)
+S_T1_vs_T3 <- results(ddsSaccharina,contrast=c("treatment", "T3", "T1"))
+S_T1_vs_T3_trimmed <- subset(S_T1_vs_T3, padj < 0.05)
+S_T1_vs_T3_trimmed <- subset(S_T1_vs_T3_trimmed, log2FoldChange > 2 | log2FoldChange < -2)
+S_T2_vs_T3 <- results(ddsSaccharina,contrast=c("treatment", "T3", "T2"))
+S_T2_vs_T3_trimmed <- subset(S_T2_vs_T3, padj < 0.05)
+S_T2_vs_T3_trimmed <- subset(S_T2_vs_T3_trimmed, log2FoldChange > 2 | log2FoldChange < -2)
+
+DESeq2::plotMA(S_C_vs_T1_trimmed,ylim=c(-50,50),main="MA-plot for the shrunken log2 fold changes\nC vs T1")
+DESeq2::plotMA(S_C_vs_T2_trimmed,ylim=c(-50,50),main="MA-plot for the shrunken log2 fold changes\nC vs T2")
+DESeq2::plotMA(S_C_vs_T3_trimmed,ylim=c(-50,50),main="MA-plot for the shrunken log2 fold changes\nC vs T3")
+DESeq2::plotMA(S_T1_vs_T2_trimmed,ylim=c(-50,50),main="MA-plot for the shrunken log2 fold changes\nT1 vs T2")
+DESeq2::plotMA(S_T1_vs_T3_trimmed,ylim=c(-50,50),main="MA-plot for the shrunken log2 fold changes\nT1 vs T3")
+DESeq2::plotMA(S_T2_vs_T3_trimmed,ylim=c(-50,50),main="MA-plot for the shrunken log2 fold changes\nT2 vs T3")
+
+
+vsdSaccharina <- vst(ddsSaccharina, blind=T)
+
+meanSdPlot(assay(vsdSaccharina))
+
+ntd <- normTransform(ddsSaccharina)
+meanSdPlot(assay(ntd))
+
+select <- order(rowMeans(counts(ddsSaccharina,normalized=TRUE)),
+                decreasing=TRUE)[1:20]
+df <- as.data.frame(colData(ddsSaccharina)[,c("treatment","mesocosm")])
+pheatmap(assay(vsdSaccharina)[select,], cluster_rows=FALSE, show_rownames=F,
+         cluster_cols=FALSE, annotation_col=df)
+
+
+
+pcaData <- plotPCA(vsdSaccharina, intgroup=c("treatment", "mesocosm"), returnData=TRUE) 
+percentVar <- round(100 * attr(pcaData, "percentVar"))
+ggplot(pcaData, aes(PC1, PC2, color=treatment, shape=mesocosm)) +
+  geom_point(size=3) +
+  xlab(paste0("PC1: ",percentVar[1],"% variance")) +
+  ylab(paste0("PC2: ",percentVar[2],"% variance")) +
+  coord_fixed() + theme_classic() 
+
+sampleDists <- dist(t(assay(vsdSaccharina)))
+library("RColorBrewer")
+sampleDistMatrix <- as.matrix(sampleDists)
+rownames(sampleDistMatrix) <- paste(vsdSaccharina$treatment, vsdSaccharina$mesocosm, sep="-")
+colnames(sampleDistMatrix) <- NULL
+colors <- colorRampPalette( rev(brewer.pal(9, "Blues")) )(255)
+pheatmap(sampleDistMatrix,
+         clustering_distance_rows=sampleDists,
+         clustering_distance_cols=sampleDists,
+         col=colors)
+
+
+count_tab_assay <- assay(vsdSaccharina)
+dist_tab_assay <- dist(t(count_tab_assay),method="euclidian")
+ad <- adonis2(data=samplesSaccharina,dist_tab_assay ~ treatment + mesocosm, method="euclidian")
+ad
+pair.mod<-pairwise.adonis(dist_tab_assay,factors=samplesSaccharina$treatment)
+pair.mod
+mod <- betadisper(dist_tab_assay,samplesSaccharina$treatment)
+mod.HSD <- TukeyHSD(mod)
+mod.HSD
+mod <- betadisper(dist_tab_assay,samplesSaccharina$mesocosm)
+mod.HSD <- TukeyHSD(mod)
+mod.HSD
+
+ordered_S_C_vs_T1<- S_C_vs_T1_trimmed[order(S_C_vs_T1_trimmed$padj),]
+ordered_S_C_vs_T2<- S_C_vs_T2_trimmed[order(S_C_vs_T2_trimmed$padj),]
+ordered_S_C_vs_T3<- S_C_vs_T3_trimmed[order(S_C_vs_T3_trimmed$padj),]
+ordered_S_T1_vs_T2<- S_T1_vs_T2_trimmed[order(S_T1_vs_T2_trimmed$padj),]
+ordered_S_T1_vs_T3<- S_T1_vs_T3_trimmed[order(S_T1_vs_T3_trimmed$padj),]
+ordered_S_T2_vs_T3<- S_T2_vs_T3_trimmed[order(S_T2_vs_T3_trimmed$padj),]
+
+write.csv(ordered_S_C_vs_T1, file = '../DESeq2/Saccharina/S_C_VS_T1.csv',sep='')
+write.csv(ordered_S_C_vs_T2, file = '../DESeq2/Saccharina/S_C_VS_T2.csv',sep='')
+write.csv(ordered_S_C_vs_T3, file = '../DESeq2/Saccharina/S_C_VS_T3.csv',sep='')
+write.csv(ordered_S_T1_vs_T2, file = '../DESeq2/Saccharina/S_T1_VS_T2.csv',sep='')
+write.csv(ordered_S_T1_vs_T2, file ='../DESeq2/Saccharina/S_T1_VS_T2.csv',sep='')
+write.csv(ordered_S_T1_vs_T3, file ='../DESeq2/Saccharina/S_T1_VS_T3.csv',sep='')
+write.csv(ordered_S_T2_vs_T3, file ='../DESeq2/Saccharina/S_T2_VS_T3.csv',sep='')
+
+# Hedophylum
+
+H_C_vs_T1 <- results(ddsHedophylum,contrast=c("treatment", "T1", "C"))
+H_C_vs_T1_trimmed <- subset(H_C_vs_T1, padj < 0.05)
+H_C_vs_T1_trimmed <- subset(H_C_vs_T1_trimmed, log2FoldChange > 2 | log2FoldChange < -2)
+H_C_vs_T2 <- results(ddsHedophylum,contrast=c("treatment", "T2", "C"))
+H_C_vs_T2_trimmed <- subset(H_C_vs_T2, padj < 0.05)
+H_C_vs_T2_trimmed <- subset(H_C_vs_T2_trimmed, log2FoldChange > 2 | log2FoldChange < -2)
+H_C_vs_T3 <- results(ddsHedophylum,contrast=c("treatment", "T3", "C"))
+H_C_vs_T3_trimmed <- subset(H_C_vs_T3, padj < 0.05)
+H_C_vs_T3_trimmed <- subset(H_C_vs_T3_trimmed, log2FoldChange > 2 | log2FoldChange < -2)
+H_T1_vs_T2 <- results(ddsHedophylum,contrast=c("treatment", "T2", "T1"))
+H_T1_vs_T2_trimmed <- subset(H_T1_vs_T2, padj < 0.05)
+H_T1_vs_T2_trimmed <- subset(H_T1_vs_T2_trimmed, log2FoldChange > 2 | log2FoldChange < -2)
+H_T1_vs_T3 <- results(ddsHedophylum,contrast=c("treatment", "T3", "T1"))
+H_T1_vs_T3_trimmed <- subset(H_T1_vs_T3, padj < 0.05)
+H_T1_vs_T3_trimmed <- subset(H_T1_vs_T3_trimmed, log2FoldChange > 2 | log2FoldChange < -2)
+H_T2_vs_T3 <- results(ddsHedophylum,contrast=c("treatment", "T3", "T2"))
+H_T2_vs_T3_trimmed <- subset(H_T2_vs_T3, padj < 0.05)
+H_T2_vs_T3_trimmed <- subset(H_T2_vs_T3_trimmed, log2FoldChange > 2 | log2FoldChange < -2)
+
+DESeq2::plotMA(H_C_vs_T1_trimmed,ylim=c(-50,50),main="MA-plot for the shrunken log2 fold changes\nC vs T1")
+DESeq2::plotMA(H_C_vs_T2_trimmed,ylim=c(-50,50),main="MA-plot for the shrunken log2 fold changes\nC vs T2")
+DESeq2::plotMA(H_C_vs_T3_trimmed,ylim=c(-50,50),main="MA-plot for the shrunken log2 fold changes\nC vs T3")
+DESeq2::plotMA(H_T1_vs_T2_trimmed,ylim=c(-50,50),main="MA-plot for the shrunken log2 fold changes\nT1 vs T2")
+DESeq2::plotMA(H_T1_vs_T3_trimmed,ylim=c(-50,50),main="MA-plot for the shrunken log2 fold changes\nT1 vs T3")
+DESeq2::plotMA(H_T2_vs_T3_trimmed,ylim=c(-50,50),main="MA-plot for the shrunken log2 fold changes\nT2 vs T3")
+
+
+vsdHedophylum <- vst(ddsHedophylum, blind=T)
+
+meanSdPlot(assay(vsdHedophylum))
+
+ntd <- normTransform(ddsHedophylum)
+meanSdPlot(assay(ntd))
+
+select <- order(rowMeans(counts(ddsHedophylum,normalized=TRUE)),
+                decreasing=TRUE)[1:20]
+df <- as.data.frame(colData(ddsHedophylum)[,c("treatment","mesocosm")])
+pheatmap(assay(vsdHedophylum)[select,], cluster_rows=FALSE, show_rownames=F,
+         cluster_cols=FALSE, annotation_col=df)
+
+
+pcaData <- plotPCA(vsdHedophylum, intgroup=c("treatment", "mesocosm"), returnData=TRUE)
+percentVar <- round(100 * attr(pcaData, "percentVar"))
+ggplot(pcaData, aes(PC1, PC2, color=treatment, shape=mesocosm)) +
+  geom_point(size=3) +
+  xlab(paste0("PC1: ",percentVar[1],"% variance")) +
+  ylab(paste0("PC2: ",percentVar[2],"% variance")) + 
+  coord_fixed() + theme_classic()
+
+sampleDists <- dist(t(assay(vsdHedophylum)))
+library("RColorBrewer")
+sampleDistMatrix <- as.matrix(sampleDists)
+rownames(sampleDistMatrix) <- paste(vsdHedophylum$treatment, vsdHedophylum$mesocosm, sep="-")
+colnames(sampleDistMatrix) <- NULL
+colors <- colorRampPalette( rev(brewer.pal(9, "Blues")) )(255)
+pheatmap(sampleDistMatrix,
+         clustering_distance_rows=sampleDists,
+         clustering_distance_cols=sampleDists,
+         col=colors)
+
+count_tab_assay <- assay(vsdHedophylum)
+dist_tab_assay <- dist(t(count_tab_assay),method="euclidian")
+ad <- adonis2(data=samplesHedophylum,dist_tab_assay ~ treatment + mesocosm, method="euclidian")
+ad
+pair.mod<-pairwise.adonis(dist_tab_assay,factors=samplesHedophylum$treatment)
+pair.mod
+mod <- betadisper(dist_tab_assay,samplesHedophylum$treatment)
+mod.HSD <- TukeyHSD(mod)
+mod.HSD
+mod <- betadisper(dist_tab_assay,samplesHedophylum$mesocosm)
+mod.HSD <- TukeyHSD(mod)
+mod.HSD
+
+ordered_H_C_vs_T1<- H_C_vs_T1_trimmed[order(H_C_vs_T1_trimmed$padj),]
+ordered_H_C_vs_T2<- H_C_vs_T2_trimmed[order(H_C_vs_T2_trimmed$padj),]
+ordered_H_C_vs_T3<- H_C_vs_T3_trimmed[order(H_C_vs_T3_trimmed$padj),]
+ordered_H_T1_vs_T2<- H_T1_vs_T2_trimmed[order(H_T1_vs_T2_trimmed$padj),]
+ordered_H_T1_vs_T3<- H_T1_vs_T3_trimmed[order(H_T1_vs_T3_trimmed$padj),]
+ordered_H_T2_vs_T3<- H_T2_vs_T3_trimmed[order(H_T2_vs_T3_trimmed$padj),]
+
+write.csv(ordered_H_C_vs_T1, file = '../DESeq2/Hedophylum/H_C_VS_T1.csv',sep='')
+write.csv(ordered_H_C_vs_T2, file = '../DESeq2/Hedophylum/H_C_VS_T2.csv',sep='')
+write.csv(ordered_H_C_vs_T3, file = '../DESeq2/Hedophylum/H_C_VS_T3.csv',sep='')
+write.csv(ordered_H_T1_vs_T2, file = '../DESeq2/Hedophylum/H_T1_VS_T2.csv',sep='')
+write.csv(ordered_H_T1_vs_T2, file ='../DESeq2/Hedophylum/H_T1_VS_T2.csv',sep='')
+write.csv(ordered_H_T1_vs_T3, file ='../DESeq2/Hedophylum/H_T1_VS_T3.csv',sep='')
+write.csv(ordered_H_T2_vs_T3, file ='../DESeq2/Hedophylum/H_T2_VS_T3.csv',sep='')
+
+heatmap_genes <- function(candidateGenes,vsd,species,genesType,colNames) {
+listGenes <- candidateGenes$genes
+listGenes2 <- which(rownames(vsd) %in% listGenes)
+index <- which(listGenes %in% rownames(vsd))
+candidateGenes2 <- candidateGenes[index, ] 
+listProt <- candidateGenes2$pfam_annotation
+listGenes3 <- candidateGenes2$genes
+
+vsdCandidate <- vsd[listGenes3, ]
+
+colnames(vsdCandidate) <- colNames
+rownames(vsdCandidate) <- listProt
+
+topVarGenesVsd <- head(order(rowVars(assay(vsdCandidate)), decreasing=TRUE), 50 )
+
+heatmap.2(assay(vsdCandidate)[topVarGenesVsd,], trace="none",scale="row",keysize=1.15,key.xlab = "",
+          key.title = "",
+          col=colorRampPalette(rev(brewer.pal(11,"PuOr")))(255), cexRow=0.6, cexCol=0.7,density.info="none",
+          ylab="PFAM annotation of expressed genes",Colv = F,margins = c(6, 7))
+main=paste("Expression level of genes related to",genesType,"in",species,sep= " ")
+title(main, cex.main = 0.9)
+}
+
+stressListSaccharina<-read.csv('../DESeq2/Saccharina/stressList.csv',header=T,sep=',')
+metaboListSaccharina<-read.csv('../DESeq2/Saccharina/metaboList.csv',header=T,sep=',')
+transportListSaccharina<-read.csv('../DESeq2/Saccharina/transportList.csv',header=T,sep=',')
+photoListSaccharina<-read.csv('../DESeq2/Saccharina/photoList.csv',header=T,sep=',')
+signalingListSaccharina<-read.csv('../DESeq2/Saccharina/signalingList.csv',header=T,sep=',')
+geneticListSaccharina<-read.csv('../DESeq2/Saccharina/geneticList.csv',header=T,sep=',')
+cytoskeletonListSaccharina<-read.csv('../DESeq2/Saccharina/cytoskeletonList.csv',header=T,sep=',')
+
+colnamesSaccharina <- c('C_M0','C_M1','C_M2','T1_M1','T1_M2','T2_M1','T3_M1','T3_M2')
+
+heatmap_genes(cytoskeletonListSaccharina,vsdSaccharina,'Saccharina','cytoskeleton',colnamesSaccharina)
+heatmap_genes(geneticListSaccharina,vsdSaccharina,'Saccharina','transcription / translation',colnamesSaccharina)
+heatmap_genes(metaboListSaccharina,vsdSaccharina,'Saccharina','metabolism',colnamesSaccharina)
+heatmap_genes(signalingListSaccharina,vsdSaccharina,'Saccharina','signaling',colnamesSaccharina)
+heatmap_genes(transportListSaccharina,vsdSaccharina,'Saccharina','transport',colnamesSaccharina)
+heatmap_genes(stressListSaccharina,vsdSaccharina,'Saccharina','stress',colnamesSaccharina)
+heatmap_genes(photoListSaccharina,vsdSaccharina,'Saccharina','respiration',colnamesSaccharina)
+
+
+stressListHedophylum<-read.csv('../DESeq2/Hedophylum/stressList.csv',header=T,sep=',')
+metaboListHedophylum<-read.csv('../DESeq2/Hedophylum/metaboList.csv',header=T,sep=',')
+transportListHedophylum<-read.csv('../DESeq2/Hedophylum/transportList.csv',header=T,sep=',')
+photoListHedophylum<-read.csv('../DESeq2/Hedophylum/photoList.csv',header=T,sep=',')
+signalingListHedophylum<-read.csv('../DESeq2/Hedophylum/signalingList.csv',header=T,sep=',')
+geneticListHedophylum<-read.csv('../DESeq2/Hedophylum/geneticList.csv',header=T,sep=',')
+cytoskeletonListHedophylum<-read.csv('../DESeq2/Hedophylum/cytoskeletonList.csv',header=T,sep=',')
+
+colnamesHedophylum <- c('C_M0','C_M2','T1_M1','T1_M2','T2_M1','T2_M2','T3_M0','T3_M2')
+
+heatmap_genes(cytoskeletonListHedophylum,vsdHedophylum,'Hedophylum','cytoskeleton',colnamesHedophylum)
+heatmap_genes(geneticListHedophylum,vsdHedophylum,'Hedophylum','transcription / translation',colnamesHedophylum)
+heatmap_genes(metaboListHedophylum,vsdHedophylum,'Hedophylum','metabolism',colnamesHedophylum)
+heatmap_genes(signalingListHedophylum,vsdHedophylum,'Hedophylum','signaling',colnamesHedophylum)
+heatmap_genes(transportListHedophylum,vsdHedophylum,'Hedophylum','transport',colnamesHedophylum)
+heatmap_genes(stressListHedophylum,vsdHedophylum,'Hedophylum','stress',colnamesHedophylum)
+heatmap_genes(photoListHedophylum,vsdHedophylum,'Hedophylum','respiration',colnamesHedophylum)
+
+sessionInfo()
+```
+

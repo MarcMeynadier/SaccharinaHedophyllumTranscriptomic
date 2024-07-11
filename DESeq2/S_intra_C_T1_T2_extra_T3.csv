@@ -1,0 +1,2 @@
+genes,baseMean,log2FoldChange,lfcSE,stat,pvalue,padj,pfam_annotation,pfam_code,function,protein,pfam_domains
+TRINITY_DN9893_c0_g1,40.0856540487015,-4.97060041766242,1.36684833445252,-3.63654129896815,0.0002763233575754,0.045383603596512,291 PhyH,PF05721,phytanoyl-CoA dioxygenase domain-containing protein,PHYHD1,PhyH

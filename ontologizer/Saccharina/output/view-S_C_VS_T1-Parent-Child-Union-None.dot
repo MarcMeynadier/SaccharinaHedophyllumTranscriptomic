@@ -1,0 +1,50 @@
+/* Generated with Ontologizer 2.1 build 20160628-1269 */
+digraph G {nodesep=0.4;
+GO_0000000[shape="box",label="GO:0000000\nGene Ontology\n6502/122988, 31/165"];
+GO_0043169[shape="box",label="GO:0043169\ncation binding\n361/122988, 6/165"];
+GO_0009987[shape="box",label="GO:0009987\ncellular process\n2908/122988, 6/165"];
+GO_0005509[shape="box",label="GO:0005509\ncalcium ion binding\n139/122988, 5/165",gradientangle=270,style="filled,setlinewidth(3)",fillcolor="white:0.166667,0.520000,1.000000"];
+GO_0051082[shape="box",label="GO:0051082\nunfolded protein binding\n185/122988, 3/165"];
+GO_0005515[shape="box",label="GO:0005515\nprotein binding\n1033/122988, 8/165"];
+GO_0005198[shape="box",label="GO:0005198\nstructural molecule activity\n806/122988, 4/165"];
+GO_0005488[shape="box",label="GO:0005488\nbinding\n3192/122988, 22/165",gradientangle=270,style="filled",fillcolor="white:0.166667,0.680000,1.000000"];
+GO_0008150[shape="box",label="GO:0008150\nbiological_process\n3686/122988, 8/165"];
+GO_0044183[shape="box",label="GO:0044183\nprotein folding chaperone\n160/122988, 3/165",gradientangle=270,style="filled,setlinewidth(3)",fillcolor="white:0.166667,0.360000,1.000000"];
+GO_0046872[shape="box",label="GO:0046872\nmetal ion binding\n358/122988, 6/165"];
+GO_0006457[shape="box",label="GO:0006457\nprotein folding\n187/122988, 3/165",gradientangle=270,style="filled",fillcolor="white:0.333333,0.840000,1.000000"];
+GO_0003674[shape="box",label="GO:0003674\nmolecular_function\n5709/122988, 29/165"];
+GO_0042302[shape="box",label="GO:0042302\nstructural constituent of\ncuticle\n10/122988, 1/165",gradientangle=270,style="filled,setlinewidth(3)",fillcolor="white:0.166667,0.200000,1.000000"];
+GO_0043167[shape="box",label="GO:0043167\nion binding\n1625/122988, 14/165"];
+GO_0000000 -> GO_0003674[color=black,dir="back",tooltip="molecular_function  Gene Ontology"];
+
+GO_0000000 -> GO_0008150[color=black,dir="back",tooltip="biological_process  Gene Ontology"];
+
+GO_0043169 -> GO_0046872[color=black,dir="back",tooltip="metal ion binding is a cation binding"];
+
+GO_0009987 -> GO_0006457[color=black,dir="back",tooltip="protein folding is a cellular process"];
+
+GO_0051082 -> GO_0044183[color=black,dir="back",tooltip="protein folding chaperone  unfolded protein binding"];
+
+GO_0005515 -> GO_0051082[color=black,dir="back",tooltip="unfolded protein binding is a protein binding"];
+
+GO_0005198 -> GO_0042302[color=black,dir="back",tooltip="structural constituent of cuticle is a structural molecule activity"];
+
+GO_0005488 -> GO_0005515[color=black,dir="back",tooltip="protein binding is a binding"];
+
+GO_0005488 -> GO_0043167[color=black,dir="back",tooltip="ion binding is a binding"];
+
+GO_0008150 -> GO_0009987[color=black,dir="back",tooltip="cellular process is a biological_process"];
+
+GO_0046872 -> GO_0005509[color=black,dir="back",tooltip="calcium ion binding is a metal ion binding"];
+
+GO_0006457 -> GO_0044183[color=blue,dir="back",tooltip="protein folding chaperone is part of protein folding"];
+
+GO_0003674 -> GO_0005198[color=black,dir="back",tooltip="structural molecule activity is a molecular_function"];
+
+GO_0003674 -> GO_0005488[color=black,dir="back",tooltip="binding is a molecular_function"];
+
+GO_0003674 -> GO_0044183[color=black,dir="back",tooltip="protein folding chaperone is a molecular_function"];
+
+GO_0043167 -> GO_0043169[color=black,dir="back",tooltip="cation binding is a ion binding"];
+
+}

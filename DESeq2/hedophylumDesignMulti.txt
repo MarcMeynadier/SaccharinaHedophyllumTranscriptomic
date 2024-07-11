@@ -1,0 +1,9 @@
+sample treatment mesocosm
+abundance_Hedophylum_86_C_M0.tsv C M0
+abundance_Hedophylum_139_C_M2.tsv C M2
+abundance_Hedophylum_142_T1_M1.tsv T1 M1
+abundance_Hedophylum_73_T1_M2.tsv T1 M2
+abundance_Hedophylum_78_T2_M1.tsv T2 M1
+abundance_Hedophylum_76_T2_M2.tsv T2 M2
+abundance_Hedophylum_141_T3_M0.tsv T3 M0 
+abundance_Hedophylum_138_T3_M2.tsv T3 M2

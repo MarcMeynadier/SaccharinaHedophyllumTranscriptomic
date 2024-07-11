@@ -1,0 +1,142 @@
+/* Generated with Ontologizer 2.1 build 20160628-1269 */
+digraph G {nodesep=0.4;
+GO_0000000[shape="box",label="GO:0000000\nGene Ontology\n5700/116407, 13/96"];
+GO_0006082[shape="box",label="GO:0006082\norganic acid metabolic process\n176/116407, 1/96"];
+GO_0009987[shape="box",label="GO:0009987\ncellular process\n2408/116407, 6/96"];
+GO_1902494[shape="box",label="GO:1902494\ncatalytic complex\n148/116407, 1/96"];
+GO_0006790[shape="box",label="GO:0006790\nsulfur compound metabolic\nprocess\n37/116407, 1/96"];
+GO_0005575[shape="box",label="GO:0005575\ncellular_component\n1473/116407, 4/96"];
+GO_0044237[shape="box",label="GO:0044237\ncellular metabolic process\n1643/116407, 4/96"];
+GO_0050896[shape="box",label="GO:0050896\nresponse to stimulus\n171/116407, 2/96",gradientangle=270,style="filled,setlinewidth(3)",fillcolor="white:0.333333,0.200000,1.000000"];
+GO_1901576[shape="box",label="GO:1901576\norganic substance biosynthetic\nprocess\n956/116407, 2/96"];
+GO_0008150[shape="box",label="GO:0008150\nbiological_process\n3028/116407, 6/96"];
+GO_0006807[shape="box",label="GO:0006807\nnitrogen compound metabolic\nprocess\n1818/116407, 3/96"];
+GO_0008152[shape="box",label="GO:0008152\nmetabolic process\n2229/116407, 4/96"];
+GO_0071704[shape="box",label="GO:0071704\norganic substance metabolic\nprocess\n2081/116407, 3/96"];
+GO_0044249[shape="box",label="GO:0044249\ncellular biosynthetic process\n888/116407, 2/96"];
+GO_0003674[shape="box",label="GO:0003674\nmolecular_function\n5004/116407, 13/96"];
+GO_0032991[shape="box",label="GO:0032991\nprotein-containing complex\n354/116407, 1/96"];
+GO_0000096[shape="box",label="GO:0000096\nsulfur amino acid metabolic\nprocess\n15/116407, 1/96",gradientangle=270,style="filled",fillcolor="white:0.333333,0.542857,1.000000"];
+GO_1903293[shape="box",label="GO:1903293\nphosphatase complex\n5/116407, 1/96",gradientangle=270,style="filled,setlinewidth(3)",fillcolor="white:0.833333,0.428571,1.000000"];
+GO_1901564[shape="box",label="GO:1901564\norganonitrogen compound\nmetabolic process\n1394/116407, 3/96"];
+GO_0000097[shape="box",label="GO:0000097\nsulfur amino acid biosynthetic\nprocess\n5/116407, 1/96",gradientangle=270,style="filled,setlinewidth(3)",fillcolor="white:0.333333,0.771429,1.000000"];
+GO_0009058[shape="box",label="GO:0009058\nbiosynthetic process\n994/116407, 2/96"];
+GO_1901566[shape="box",label="GO:1901566\norganonitrogen compound\nbiosynthetic process\n678/116407, 2/96"];
+GO_0016740[shape="box",label="GO:0016740\ntransferase activity\n793/116407, 4/96"];
+GO_0042085[shape="box",label="GO:0042085\n5-methyltetrahydropteroyltri-L-glutamate-dependent\nmethyltransferase activity\n1/116407, 1/96",gradientangle=270,style="filled,setlinewidth(3)",fillcolor="white:0.166667,0.885714,1.000000"];
+GO_0016741[shape="box",label="GO:0016741\ntransferase activity,\ntransferring one-carbon groups\n107/116407, 1/96"];
+GO_0019752[shape="box",label="GO:0019752\ncarboxylic acid metabolic\nprocess\n175/116407, 1/96"];
+GO_0008168[shape="box",label="GO:0008168\nmethyltransferase activity\n102/116407, 1/96"];
+GO_0043436[shape="box",label="GO:0043436\noxoacid metabolic process\n175/116407, 1/96"];
+GO_0008172[shape="box",label="GO:0008172\nS-methyltransferase activity\n2/116407, 1/96",gradientangle=270,style="filled,setlinewidth(3)",fillcolor="white:0.166667,0.657143,1.000000"];
+GO_0044272[shape="box",label="GO:0044272\nsulfur compound biosynthetic\nprocess\n16/116407, 1/96",gradientangle=270,style="filled",fillcolor="white:0.333333,0.314286,1.000000"];
+GO_0003824[shape="box",label="GO:0003824\ncatalytic activity\n2536/116407, 8/96"];
+GO_0016053[shape="box",label="GO:0016053\norganic acid biosynthetic\nprocess\n49/116407, 1/96"];
+GO_0044281[shape="box",label="GO:0044281\nsmall molecule metabolic\nprocess\n296/116407, 1/96"];
+GO_0046394[shape="box",label="GO:0046394\ncarboxylic acid biosynthetic\nprocess\n49/116407, 1/96"];
+GO_0044283[shape="box",label="GO:0044283\nsmall molecule biosynthetic\nprocess\n79/116407, 1/96"];
+GO_0000000 -> GO_0003674[color=black,dir="back",tooltip="molecular_function  Gene Ontology"];
+
+GO_0000000 -> GO_0005575[color=black,dir="back",tooltip="cellular_component  Gene Ontology"];
+
+GO_0000000 -> GO_0008150[color=black,dir="back",tooltip="biological_process  Gene Ontology"];
+
+GO_0006082 -> GO_0016053[color=black,dir="back",tooltip="organic acid biosynthetic process is a organic acid metabolic process"];
+
+GO_0006082 -> GO_0043436[color=black,dir="back",tooltip="oxoacid metabolic process is a organic acid metabolic process"];
+
+GO_0009987 -> GO_0044237[color=black,dir="back",tooltip="cellular metabolic process is a cellular process"];
+
+GO_1902494 -> GO_1903293[color=black,dir="back",tooltip="phosphatase complex is a catalytic complex"];
+
+GO_0006790 -> GO_0000096[color=black,dir="back",tooltip="sulfur amino acid metabolic process is a sulfur compound metabolic process"];
+
+GO_0006790 -> GO_0044272[color=black,dir="back",tooltip="sulfur compound biosynthetic process is a sulfur compound metabolic process"];
+
+GO_0005575 -> GO_0032991[color=black,dir="back",tooltip="protein-containing complex is a cellular_component"];
+
+GO_0044237 -> GO_0006082[color=black,dir="back",tooltip="organic acid metabolic process is a cellular metabolic process"];
+
+GO_0044237 -> GO_0006790[color=black,dir="back",tooltip="sulfur compound metabolic process is a cellular metabolic process"];
+
+GO_0044237 -> GO_0044249[color=black,dir="back",tooltip="cellular biosynthetic process is a cellular metabolic process"];
+
+GO_1901576 -> GO_1901566[color=black,dir="back",tooltip="organonitrogen compound biosynthetic process is a organic substance biosynthetic process"];
+
+GO_1901576 -> GO_0016053[color=black,dir="back",tooltip="organic acid biosynthetic process is a organic substance biosynthetic process"];
+
+GO_0008150 -> GO_0008152[color=black,dir="back",tooltip="metabolic process is a biological_process"];
+
+GO_0008150 -> GO_0009987[color=black,dir="back",tooltip="cellular process is a biological_process"];
+
+GO_0008150 -> GO_0050896[color=black,dir="back",tooltip="response to stimulus is a biological_process"];
+
+GO_0006807 -> GO_1901564[color=black,dir="back",tooltip="organonitrogen compound metabolic process is a nitrogen compound metabolic process"];
+
+GO_0008152 -> GO_0071704[color=black,dir="back",tooltip="organic substance metabolic process is a metabolic process"];
+
+GO_0008152 -> GO_0006807[color=black,dir="back",tooltip="nitrogen compound metabolic process is a metabolic process"];
+
+GO_0008152 -> GO_0009058[color=black,dir="back",tooltip="biosynthetic process is a metabolic process"];
+
+GO_0008152 -> GO_0044237[color=black,dir="back",tooltip="cellular metabolic process is a metabolic process"];
+
+GO_0008152 -> GO_0044281[color=black,dir="back",tooltip="small molecule metabolic process is a metabolic process"];
+
+GO_0071704 -> GO_1901564[color=black,dir="back",tooltip="organonitrogen compound metabolic process is a organic substance metabolic process"];
+
+GO_0071704 -> GO_1901576[color=black,dir="back",tooltip="organic substance biosynthetic process is a organic substance metabolic process"];
+
+GO_0071704 -> GO_0006082[color=black,dir="back",tooltip="organic acid metabolic process is a organic substance metabolic process"];
+
+GO_0044249 -> GO_0016053[color=black,dir="back",tooltip="organic acid biosynthetic process is a cellular biosynthetic process"];
+
+GO_0044249 -> GO_0044272[color=black,dir="back",tooltip="sulfur compound biosynthetic process is a cellular biosynthetic process"];
+
+GO_0003674 -> GO_0003824[color=black,dir="back",tooltip="catalytic activity is a molecular_function"];
+
+GO_0032991 -> GO_1902494[color=black,dir="back",tooltip="catalytic complex is a protein-containing complex"];
+
+GO_0000096 -> GO_0000097[color=black,dir="back",tooltip="sulfur amino acid biosynthetic process is a sulfur amino acid metabolic process"];
+
+GO_1901564 -> GO_0000096[color=black,dir="back",tooltip="sulfur amino acid metabolic process is a organonitrogen compound metabolic process"];
+
+GO_1901564 -> GO_1901566[color=black,dir="back",tooltip="organonitrogen compound biosynthetic process is a organonitrogen compound metabolic process"];
+
+GO_0009058 -> GO_1901576[color=black,dir="back",tooltip="organic substance biosynthetic process is a biosynthetic process"];
+
+GO_0009058 -> GO_0044249[color=black,dir="back",tooltip="cellular biosynthetic process is a biosynthetic process"];
+
+GO_0009058 -> GO_0044283[color=black,dir="back",tooltip="small molecule biosynthetic process is a biosynthetic process"];
+
+GO_1901566 -> GO_0000097[color=black,dir="back",tooltip="sulfur amino acid biosynthetic process is a organonitrogen compound biosynthetic process"];
+
+GO_0016740 -> GO_0016741[color=black,dir="back",tooltip="transferase activity, transferring one-carbon groups is a transferase activity"];
+
+GO_0016741 -> GO_0008168[color=black,dir="back",tooltip="methyltransferase activity is a transferase activity, transferring one-carbon groups"];
+
+GO_0019752 -> GO_0000096[color=black,dir="back",tooltip="sulfur amino acid metabolic process is a carboxylic acid metabolic process"];
+
+GO_0019752 -> GO_0046394[color=black,dir="back",tooltip="carboxylic acid biosynthetic process is a carboxylic acid metabolic process"];
+
+GO_0008168 -> GO_0008172[color=black,dir="back",tooltip="S-methyltransferase activity is a methyltransferase activity"];
+
+GO_0008168 -> GO_0042085[color=black,dir="back",tooltip="5-methyltetrahydropteroyltri-L-glutamate-dependent methyltransferase activity is a methyltransferase activity"];
+
+GO_0043436 -> GO_0019752[color=black,dir="back",tooltip="carboxylic acid metabolic process is a oxoacid metabolic process"];
+
+GO_0044272 -> GO_0000097[color=black,dir="back",tooltip="sulfur amino acid biosynthetic process is a sulfur compound biosynthetic process"];
+
+GO_0003824 -> GO_0016740[color=black,dir="back",tooltip="transferase activity is a catalytic activity"];
+
+GO_0016053 -> GO_0046394[color=black,dir="back",tooltip="carboxylic acid biosynthetic process is a organic acid biosynthetic process"];
+
+GO_0044281 -> GO_0006082[color=black,dir="back",tooltip="organic acid metabolic process is a small molecule metabolic process"];
+
+GO_0044281 -> GO_0044283[color=black,dir="back",tooltip="small molecule biosynthetic process is a small molecule metabolic process"];
+
+GO_0046394 -> GO_0000097[color=black,dir="back",tooltip="sulfur amino acid biosynthetic process is a carboxylic acid biosynthetic process"];
+
+GO_0044283 -> GO_0016053[color=black,dir="back",tooltip="organic acid biosynthetic process is a small molecule biosynthetic process"];
+
+}
